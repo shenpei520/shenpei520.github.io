@@ -597,11 +597,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 1.2k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.4k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 4分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 5分钟 |
           </span>
   
           
@@ -754,6 +754,46 @@ books   <span class="token comment">#书籍</span><span aria-hidden="true" class
   <span class="token key atrule">status</span><span class="token punctuation">:</span> <span class="token string">'划水中'</span> <span class="token comment"># 状态</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
               </div>
             </details>
+
+<details green><summary pointer> skills 填写我的技能 </summary>
+              <div class='content'>
+              <p><code>skills</code> 填写我的技能，格式如下，<strong>注意空格缩进哦</strong></p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 关于我 技能</span>
+<span class="token key atrule">skills</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否显示</span>
+  <span class="token key atrule">data</span><span class="token punctuation">:</span> <span class="token comment"># 这个data不能忘了，下面的字段注意缩进</span>
+    <span class="token key atrule">HTML5</span><span class="token punctuation">:</span> <span class="token comment"># 这里写你的技能名称，如 HTML5或者java</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'red'</span> <span class="token comment"># 进度条颜色</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 90% <span class="token comment"># 进度条百分比</span>
+    <span class="token key atrule">JavaScript</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 85%
+    <span class="token key atrule">CSS</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'#000'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 70%
+    <span class="token comment"># 可以在下面继续写哦，例如python，java等，按照上面的格式写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
+
+
+
+<div class="note quote"><p><strong>注意这里可使用嵌套标签</strong></p><details red><summary pointer> 查看嵌套测试 </summary>              <div class='content'>              <details blue><summary pointer> 查看嵌套测试2 </summary>              <div class='content'>              <details ><summary pointer> 查看嵌套测试3 </summary>              <div class='content'>              <p>hahaha <span><img src='https://image.dbbqb.com/202101221115/7cdd741907c2ea150d054d24c4da6594/4d0G' ></span></p>              </div>            </details>              </div>            </details>              </div>            </details></div>
+
+<h1 class="bamboo-h " id="Pjax">Pjax</h1><br/>
+
+<p>页面不刷新跳转，音乐可以不间断播放。关闭则跳转页面时候刷新页面</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">pjax</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">animation</span><span class="token punctuation">:</span> circle <span class="token comment"># false, nprogress, circle</span>
+  <span class="token key atrule">animationColor</span><span class="token punctuation">:</span> <span class="token string">'orangered'</span> <span class="token comment"># animation为 nprogress时候的动画颜色, red or #000 ...</span>
+  <span class="token key atrule">cacheBust</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># url 地址追加时间戳，用以避免浏览器缓存</span>
+  <span class="token key atrule">timeout</span><span class="token punctuation">:</span> <span class="token number">5000</span>    <span class="token comment"># The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.</span>
+  <span class="token key atrule">banUrl</span><span class="token punctuation">:</span>          <span class="token comment"># 被屏蔽的 url 地址将不启用 pjax 跳转，可以在控制台下使用 window.location.pathname 获取</span>
+      <span class="token comment"># - '/xxx/'     </span>
+      <span class="token comment"># - '/xxx/' </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
 
 
       </div>
