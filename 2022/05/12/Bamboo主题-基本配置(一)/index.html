@@ -597,11 +597,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 635 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.2k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 4分钟 |
           </span>
   
           
@@ -693,6 +693,67 @@
 
 <p>然后重启服务，<code>hexo clean</code> &amp;&amp; <code>hexo s</code>即可<br>卸载命令如下，如果你安装了此插件，后来想使用前两种高亮，请先卸载此插件</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> un hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></div></div>
+
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>在主题文件夹下的<code>_config.yml</code>文件中设置<code>search</code>为true或者false控制显示隐藏</p>
+<h2 id="新建分类categories页"><a href="#新建分类categories页" class="headerlink" title="新建分类categories页"></a>新建分类categories页</h2><p><code>categories</code> 页是用来展示所有分类的页面，也就是导航上的分类页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要手动或者使用命令新建一个，命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page <span class="token string">"categories"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，<strong>至少需要以下内容</strong>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> categories
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"categories"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"categories"</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="新建标签tags页"><a href="#新建标签tags页" class="headerlink" title="新建标签tags页"></a>新建标签tags页</h2><p><code>tags</code> 页是用来展示所有标签的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page <span class="token string">"tags"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/tags/index.md</code>，<strong>至少需要以下内容</strong>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> tags
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"tags"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"tags"</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="新建关于我about页面"><a href="#新建关于我about页面" class="headerlink" title="新建关于我about页面"></a>新建关于我about页面</h2><p><code>about</code> 页是用来展示<strong>关于我和我的博客</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page <span class="token string">"about"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，<strong>至少需要以下内容</strong>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> about
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-14 15:30:30</span> <span class="token comment"># 时间随便写</span>
+<span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">"about"</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> <span class="token string">"about"</span>
+<span class="token punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后可以在本主题下的<code>_config.yml</code>文件下，编辑以下字段进行关于我页面信息的更改</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">baseInfo <span class="token comment"># 基本信息，包括年龄，性别，坐标，状态</span>
+skills   <span class="token comment"># 技能</span>
+socialAccounts <span class="token comment"># 社交账号</span>
+games   <span class="token comment"># 游戏</span>
+books   <span class="token comment">#书籍</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>写法如下</p>
+<details cyan open><summary pointer> baseInfo基本信息 </summary>
+              <div class='content'>
+              <p>  <code>baseInfo</code>主要包含年龄，性别，坐标，状态，格式如下，<strong>注意空格缩进哦</strong></p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">baseInfo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">on</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否显示</span>
+  <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">99</span> <span class="token comment"># 年龄</span>
+  <span class="token key atrule">sex</span><span class="token punctuation">:</span> <span class="token string">'男'</span> <span class="token comment"># 性别</span>
+  <span class="token key atrule">coordinate</span><span class="token punctuation">:</span> <span class="token string">'火星'</span> <span class="token comment"># 坐标</span>
+  <span class="token key atrule">status</span><span class="token punctuation">:</span> <span class="token string">'划水中'</span> <span class="token comment"># 状态</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
 
 
       </div>
