@@ -1353,7 +1353,7 @@ date
         :data="listData"
         :class-option="classOption"
         class="warp"
-        style="height: 30px"
+        style="height: 60px"
       >
         <ul class="index-notice-content__ul">
           
@@ -1362,14 +1362,31 @@ date
               
                 <div class="index-notice-content__title">
                   
-                    <span title="#欢迎来到我的博客" style="color:red">
+                    <a href="/archives" title="#欢迎来到我的博客" style="color:red">
                       #欢迎来到我的博客
-                    </span>
+                    </a>
                   
                 </div>
                 
                   <div class="index-notice-content__date" style="color:red">
                     2021-05-10
+                  </div>
+                
+              
+            </li>
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a href="/archives" title="#BLOG升级到2.0了，欢迎！" style="color:blue">
+                      #BLOG升级到2.0了，欢迎！
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="color:blue">
+                    2021-05-12
                   </div>
                 
               
@@ -1388,7 +1405,7 @@ date
 <script>
   var seamless = JSON.parse('false');
   seamless = seamless ? 0 : 30;
-  var listData = '[object Object]' || '';
+  var listData = '[object Object],[object Object]' || '';
   listData = listData.split(',');
   var vm = new Vue({
     el: '#appIndexNotice',
@@ -2167,7 +2184,7 @@ date
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Thu May 12 2022 16:33:22 GMT+0800 (GMT+08:00)</div>
+            <div id="last-update" style="display: none;">Thu May 12 2022 16:38:47 GMT+0800 (GMT+08:00)</div>
             <div id="last-update-show">2022-05-12 日</div>
           
         </div>
